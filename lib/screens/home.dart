@@ -26,7 +26,7 @@ class _homeState extends State<home> {
                   )
                 ]),
             child: Text(
-              'Inicio de aplicación',
+              'Inicio',
               style: Theme.of(context).textTheme.headline1,
               textAlign: TextAlign.center,
             ),

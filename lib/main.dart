@@ -1,11 +1,10 @@
 import 'dart:ui';
-
+import 'package:ff_navigation_bar/ff_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:primer_avance/screens/home.dart';
 import 'package:primer_avance/screens/methods.dart';
 import 'package:primer_avance/screens/profile.dart';
 import 'package:primer_avance/screens/statistics.dart';
-//import 'package:primer_avance/screens/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,28 +27,28 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         backgroundColor: Color(0xFFFFF5FD),
         body: paginas[paginaActual],
-        bottomNavigationBar: BottomNavigationBar(
-          iconSize: 27.0,
-          //selectedIconTheme:
-          backgroundColor: Colors.white,
-          currentIndex: paginaActual,
-          onTap: (index) {
+        bottomNavigationBar: FFNavigationBar(
+          theme: FFNavigationBarTheme(
+            barBackgroundColor: Colors.white,
+            selectedItemBorderColor: Color(0XFFFF96AD),
+            selectedItemBackgroundColor: Color(0xFFFFDEE5),
+            selectedItemIconColor: Color(0XFF022E57),
+            selectedItemLabelColor: Colors.black,
+          ),
+          selectedIndex: paginaActual,
+          onSelectTab: (index) {
             setState(() {
               paginaActual = index;
             });
           },
-          unselectedItemColor: Colors.blueGrey[500],
-          //unselectedIconTheme: ,
-          selectedItemColor: Color(0XFF022E57),
-          type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Inicio"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.analytics), label: "Estadísticas"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.health_and_safety), label: "Métodos"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle), label: "Perfil"),
+          items: [
+            FFNavigationBarItem(iconData: Icons.home, label: "Inicio"),
+            FFNavigationBarItem(
+                iconData: Icons.analytics, label: "Estadísticas"),
+            FFNavigationBarItem(
+                iconData: Icons.health_and_safety, label: "Métodos"),
+            FFNavigationBarItem(
+                iconData: Icons.account_circle, label: "Perfil"),
           ],
         ),
       ),
