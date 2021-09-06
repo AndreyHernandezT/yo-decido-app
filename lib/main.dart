@@ -2,15 +2,24 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:primer_avance/screens/home.dart';
+import 'package:primer_avance/screens/methods.dart';
+import 'package:primer_avance/screens/profile.dart';
+import 'package:primer_avance/screens/statistics.dart';
 //import 'package:primer_avance/screens/home.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   int paginaActual = 0;
-  List<Widget> paginas = [];
+  List<Widget> paginas = [home(), Statistics(), Methods(), Profile()];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,8 +27,31 @@ class MyApp extends StatelessWidget {
       title: 'Hello World App',
       home: Scaffold(
         backgroundColor: Color(0xFFFFF5FD),
-        body: home(),
-        bottomNavigationBar: _bottomBar(),
+        body: paginas[paginaActual],
+        bottomNavigationBar: BottomNavigationBar(
+          iconSize: 27.0,
+          //selectedIconTheme:
+          backgroundColor: Colors.white,
+          currentIndex: paginaActual,
+          onTap: (index) {
+            setState(() {
+              paginaActual = index;
+            });
+          },
+          unselectedItemColor: Colors.blueGrey[500],
+          //unselectedIconTheme: ,
+          selectedItemColor: Color(0XFF022E57),
+          type: BottomNavigationBarType.fixed,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Inicio"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.analytics), label: "Estadísticas"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.health_and_safety), label: "Métodos"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle), label: "Perfil"),
+          ],
+        ),
       ),
       theme: ThemeData(
           primaryColor: Color(0XFFFF96AD),
@@ -43,23 +75,4 @@ class MyApp extends StatelessWidget {
               ))),
     );
   }
-}
-
-Widget _bottomBar() {
-  return BottomNavigationBar(
-    iconSize: 27.0,
-    backgroundColor: Colors.white,
-    unselectedItemColor: Color(0XFF005A8D),
-    selectedItemColor: Color(0XFF022E57),
-    type: BottomNavigationBarType.fixed,
-    items: <BottomNavigationBarItem>[
-      BottomNavigationBarItem(icon: Icon(Icons.home), label: "Inicio"),
-      BottomNavigationBarItem(
-          icon: Icon(Icons.analytics), label: "Estadísticas"),
-      BottomNavigationBarItem(
-          icon: Icon(Icons.health_and_safety), label: "Métodos"),
-      BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle), label: "Perfil"),
-    ],
-  );
 }
