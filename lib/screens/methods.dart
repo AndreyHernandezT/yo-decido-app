@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primer_avance/widgets/method_card.dart';
 
 class Methods extends StatefulWidget {
   @override
@@ -8,30 +9,15 @@ class Methods extends StatefulWidget {
 class _MethodsState extends State<Methods> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            padding: EdgeInsets.all(20.0),
-            decoration: BoxDecoration(
-                color: Theme.of(context).accentColor,
-                borderRadius: BorderRadius.circular(5.0),
-                boxShadow: <BoxShadow>[
-                  BoxShadow(
-                    color: Theme.of(context).primaryColor,
-                    offset: Offset(2.0, 2.0),
-                    blurRadius: 5.0,
-                  )
-                ]),
-            child: Text(
-              'Métodos',
-              style: Theme.of(context).textTheme.headline1,
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
+    return Scaffold(
+      backgroundColor: Color(0xFFFFF5FD),
+      body: MethodCard(
+        name: 'Condón Masculino',
+        efficiency: 80,
+        regimen: 'Cada vez',
+        method: 'Barrera',
+        image:
+            'https://us.123rf.com/450wm/roiandroi/roiandroi1807/roiandroi180700007/104851049-condones-de-l%C3%A1tex-icono-de-vector-de-anticoncepci%C3%B3n-en-el-paquete-ilustraci%C3%B3n-de-dibujos-animados-ai.jpg?ver=6',
       ),
     );
   }

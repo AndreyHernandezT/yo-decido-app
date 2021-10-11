@@ -1,4 +1,5 @@
 import 'dart:ui';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:ff_navigation_bar/ff_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:primer_avance/screens/home.dart';
@@ -23,17 +24,43 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hello World App',
       home: Scaffold(
-        backgroundColor: Color(0xFFFFF5FD),
-        body: paginas[paginaActual],
+        body: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxIsScrolled) {
+            return <Widget>[
+              SliverAppBar(
+                backgroundColor: Color(0XFFFF96AD),
+                title: Text(
+                  'YoDecido',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                floating: true,
+                forceElevated: innerBoxIsScrolled,
+                actions: [
+                  Container(
+                    child: IconButton(
+                      icon: Icon(Icons.search_rounded),
+                      onPressed: () {},
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xFFFFDEE5),
+                    ),
+                    margin: EdgeInsets.all(9.0),
+                  ),
+                ],
+              ),
+            ];
+          },
+          body: paginas[paginaActual],
+        ),
         bottomNavigationBar: FFNavigationBar(
           theme: FFNavigationBarTheme(
             barBackgroundColor: Colors.white,
             selectedItemBorderColor: Color(0XFFFF96AD),
             selectedItemBackgroundColor: Color(0xFFFFDEE5),
             selectedItemIconColor: Color(0XFF022E57),
-            selectedItemLabelColor: Colors.black,
+            selectedItemLabelColor: Color(0XFF022E57),
           ),
           selectedIndex: paginaActual,
           onSelectTab: (index) {
@@ -53,25 +80,35 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       theme: ThemeData(
-          primaryColor: Color(0XFFFF96AD),
-          accentColor: Color(0xFFFFDEE5),
-          highlightColor: Color(0XFF022E57),
-          textTheme: TextTheme(
-              headline1: TextStyle(
-                fontSize: 35.0,
-                fontWeight: FontWeight.bold,
-                color: Color(0XFF022E57),
-              ),
-              headline2: TextStyle(
-                fontSize: 23.0,
-                fontWeight: FontWeight.normal,
-                color: Colors.blueGrey[200],
-              ),
-              headline3: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.normal,
-                color: Colors.blueGrey[200],
-              ))),
+        primaryColor: Color(0XFFFF96AD),
+        highlightColor: Color(0XFF022E57),
+        textTheme: TextTheme(
+          bodyText1: TextStyle(
+            color: Colors.white,
+            fontSize: 15,
+          ),
+          bodyText2: TextStyle(
+            color: Colors.green,
+            fontSize: 15,
+            fontWeight: FontWeight.bold,
+          ),
+          headline1: TextStyle(
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          headline2: TextStyle(
+            fontSize: 23.0,
+            fontWeight: FontWeight.normal,
+            color: Colors.blueGrey[200],
+          ),
+          headline3: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.normal,
+            color: Colors.blueGrey[200],
+          ),
+        ),
+      ),
     );
   }
 }
