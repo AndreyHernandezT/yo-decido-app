@@ -88,7 +88,7 @@ class _MyAppState extends State<MyApp> {
             fontSize: 15,
           ),
           bodyText2: TextStyle(
-            color: Colors.green,
+            color: Colors.lightGreen,
             fontSize: 15,
             fontWeight: FontWeight.bold,
           ),

@@ -1,25 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:primer_avance/models/Method.dart';
 
-class MethodCard extends StatelessWidget {
-  final String name;
-  final int efficiency;
-  final String regimen;
-  final String method;
-  final String image;
+class CreateCards extends StatelessWidget {
+  //const CreateCards({ Key? key }) : super(key: key);
+  final List<Method> methods;
 
-  MethodCard({
-    required this.name,
-    required this.efficiency,
-    required this.regimen,
-    required this.method,
-    required this.image,
-  });
+  CreateCards({required this.methods});
 
-  Widget levelEfficiency(efficien, context) {
+  @override
+  Widget levelEfficiency(method, efficien, context) {
     final Color level;
     TextStyle? body;
-    if (efficien > 60) {
-      level = Colors.green;
+    if (int.parse(efficien) > 85) {
+      level = Colors.lightGreen;
       body = Theme.of(context).textTheme.bodyText2;
     } else {
       level = Colors.yellow;
@@ -37,7 +30,7 @@ class MethodCard extends StatelessWidget {
       ),
       SizedBox(width: 7),
       Text(
-        efficiency.toString() + '%',
+        method.efficiency.toString() + '%',
         style: body,
       )
     ]);
@@ -45,110 +38,116 @@ class MethodCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
-      width: MediaQuery.of(context).size.width,
-      height: 180,
-      decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.circular(15),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.6),
-            offset: Offset(
-              0.0,
-              10.0,
-            ),
-            blurRadius: 10.0,
-            spreadRadius: -6.0,
-          ),
-        ],
-        image: DecorationImage(
-          colorFilter: ColorFilter.mode(
-            Colors.black.withOpacity(0.35),
-            BlendMode.multiply,
-          ),
-          image: NetworkImage(image),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Stack(
-        children: [
-          Align(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5.0),
-              child: Text(
-                name,
-                style: Theme.of(context).textTheme.headline1,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 2,
-                textAlign: TextAlign.center,
+    return ListView.builder(
+        itemCount: methods.length,
+        itemBuilder: (context, index) {
+          final method = methods[index];
+          return Container(
+            margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+            width: MediaQuery.of(context).size.width,
+            height: 180,
+            decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.6),
+                  offset: Offset(
+                    0.0,
+                    10.0,
+                  ),
+                  blurRadius: 10.0,
+                  spreadRadius: -6.0,
+                ),
+              ],
+              image: DecorationImage(
+                colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.35),
+                  BlendMode.multiply,
+                ),
+                image: NetworkImage(method.image),
+                fit: BoxFit.cover,
               ),
             ),
-            alignment: Alignment.center,
-          ),
-          Align(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Stack(
               children: [
-                Container(
-                    padding: EdgeInsets.all(5),
-                    margin: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.4),
-                      borderRadius: BorderRadius.circular(15),
+                Align(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 5.0),
+                    child: Text(
+                      method.name,
+                      style: Theme.of(context).textTheme.headline1,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      textAlign: TextAlign.center,
                     ),
-                    child: levelEfficiency(efficiency, context)),
-                Container(
-                  padding: EdgeInsets.all(5),
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.4),
-                    borderRadius: BorderRadius.circular(15),
                   ),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.offline_bolt_rounded,
-                        color: Color(0xFFFFDEE5),
-                        size: 18,
-                      ),
-                      SizedBox(width: 7),
-                      Text(
-                        method,
-                        style: Theme.of(context).textTheme.bodyText1,
-                      ),
-                    ],
-                  ),
+                  alignment: Alignment.center,
                 ),
-                Container(
-                  padding: EdgeInsets.all(5),
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.4),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
+                Align(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(
-                        Icons.calendar_today_rounded,
-                        color: Color(0xFFFFDEE5),
-                        size: 18,
+                      Container(
+                          padding: EdgeInsets.all(5),
+                          margin: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.4),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: levelEfficiency(
+                              method, method.efficiency, context)),
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.offline_bolt_rounded,
+                              color: Color(0xFFFFDEE5),
+                              size: 18,
+                            ),
+                            SizedBox(width: 7),
+                            Text(
+                              method.metodo,
+                              style: Theme.of(context).textTheme.bodyText1,
+                            ),
+                          ],
+                        ),
                       ),
-                      SizedBox(width: 7),
-                      Text(
-                        regimen,
-                        style: Theme.of(context).textTheme.bodyText1,
-                      ),
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.calendar_today_rounded,
+                              color: Color(0xFFFFDEE5),
+                              size: 18,
+                            ),
+                            SizedBox(width: 7),
+                            Text(
+                              method.regimen,
+                              style: Theme.of(context).textTheme.bodyText1,
+                            ),
+                          ],
+                        ),
+                      )
                     ],
                   ),
-                )
+                  alignment: Alignment.bottomLeft,
+                ),
               ],
             ),
-            alignment: Alignment.bottomLeft,
-          ),
-        ],
-      ),
-    );
+          );
+        });
   }
 }

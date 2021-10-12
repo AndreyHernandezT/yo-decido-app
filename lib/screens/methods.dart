@@ -1,4 +1,9 @@
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:primer_avance/models/Method.dart';
 import 'package:primer_avance/widgets/method_card.dart';
 
 class Methods extends StatefulWidget {
@@ -7,18 +12,32 @@ class Methods extends StatefulWidget {
 }
 
 class _MethodsState extends State<Methods> {
-  @override
+  List<Method> _method = [];
+
+  void initState() {
+    super.initState();
+    _populateAllMethods();
+  }
+
+  void _populateAllMethods() async {
+    final methods = await getMethods();
+    setState(() {
+      _method = methods;
+    });
+  }
+
+  Future<String> getJson() {
+    return rootBundle.loadString("sources/data.json");
+  }
+
+  Future<List<Method>> getMethods() async {
+    var result = jsonDecode(await getJson());
+    Iterable list = result["methods"];
+
+    return list.map((method) => Method.fromJson(method)).toList();
+  }
+
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFFFFF5FD),
-      body: MethodCard(
-        name: 'Condón Masculino',
-        efficiency: 80,
-        regimen: 'Cada vez',
-        method: 'Barrera',
-        image:
-            'https://us.123rf.com/450wm/roiandroi/roiandroi1807/roiandroi180700007/104851049-condones-de-l%C3%A1tex-icono-de-vector-de-anticoncepci%C3%B3n-en-el-paquete-ilustraci%C3%B3n-de-dibujos-animados-ai.jpg?ver=6',
-      ),
-    );
+    return CreateCards(methods: _method);
   }
 }

@@ -1,0 +1,193 @@
+{
+    "methods": [
+        {
+            "name": "CONDÓN MASCULINO",
+            "efficiency": "82",
+            "metodo": "Barrera",
+            "regimen": "Cada vez",
+            "image": "https://st2.depositphotos.com/1074529/8158/v/600/depositphotos_81583894-stock-illustration-condom.jpg",
+            "description": "Un condón es una delgada funda de látex o poliuretano que se coloca sobre el pene erecto del hombre antes de tener sexo.",
+            "details": "El condón, uno de los métodos anticonceptivos más populares, es una forma simple y barata de prevenir embarazos no planeados y ETS. El condón actúa capturando los espermatozoides a medida que éstos se liberan e impidiendo que entren a la vagina. La punta tiene un reservorio que colecta el semen del hombre e impide que entre a la vagina durante la eyaculación. Junto con los condones femeninos, son el único método anticonceptivo que te protege contra ETS y contra el embarazo. Lo más importante es que uses un condón cada vez que tengas sexo.\nLos condones vienen en todas las formas y tamaños y, para los que son sensibles, en todos materiales, de tal forma que, incluso si tienes alergias o piel sensible, hay un condón adecuado para ti.",
+            "benefits": [                
+                    "Protege contra ETS",
+                    "Bajo costo",
+                    "Fácil de usar"
+                ],
+            "use": {
+                "imgs": [
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-02/malecondom2.png",
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-02/malecondom1.png"
+                ],
+                "description": "Usar el condón es fácil, solo desenrolla el condón sobre el pene erecto justo antes del sexo y ya está. Una vez que hayas terminado y el condón haya cumplido con su función, quítalo antes de que el pene se ablande. Se debe sujetar contra la base del pene tan pronto como haya ocurrido la eyaculación para asegurarse de que no se deslice y para prevenir que el semen se escape al retirar el pene. Úsalo una vez y después tíralo.\nEs importante revisar qué tipo de lubricante es apropiado para usar con cada uno de los materiales de los condones ya que algunos pueden tener efectos adversos sobre el material. Por ejemplo, los lubricantes a base de aceite no se llevan bien con el látex y el ponerlos juntos puede hacer que el condón se rompa o se deslice, solo para que sepas."},
+            "pros": [
+                "Se puede usar a libre demanda",
+                "Puedes llevarlo contigo fácilmente",
+                "No se afecta por el uso de otros medicamentos",
+                "Se puede usar cuando se está amamantando",
+                "Sin hormonas",
+                "Es fácil de usar",
+                "Es la mejor protección contra VIH/SIDA y otras enfermedades de transmisión sexual (ETS)"
+            ],
+            "cons": [
+                "Interrumpe el sexo",
+                "Se puede romper o salir durante el sexo si no se usa correctamente",
+                "Algunas personas son alérgicas a los condones de látex",
+                "Puede producir irritación o reacciones alérgicas (si eres alérgico al látex puedes probar condones de poliuretano)"
+            ]
+        
+        },
+        {
+            "name": "LA PÍLDORA",
+            "efficiency": "91",
+            "regimen": "Diario",
+            "metodo": "Hormonal",
+            "image": "https://www.harta.uy/wp-content/uploads/2018/12/pastillas.jpg",
+            "description": "La píldora es una pequeña tableta que contiene hormonas y que las mujeres deben tomar todos los días a la misma hora.",
+            "details": "La Píldora es una tableta que tomas una vez al día – existen unos cuantos tipos diferentes de píldoras. La píldora combinada contiene estrógeno y progestina, que impiden que los ovarios liberen óvulos. También hacen que el moco cervical sea más espeso, lo que no permite que los espermatozoides lleguen al óvulo. La llamada mini-píldora contiene solo una hormona, una progestina, lo que ofrece una alternativa a aquellas mujeres a las que los estrógenos les afectan.\nDebes tomar la píldora todos los días a la misma hora, tanto si tienes sexo como si no. Pregunta a tu médico si, de acuerdo con tus antecedentes médicos, la píldora combinada es un método anticonceptivo adecuado para ti, si es así, pregunta qué tipo es mejor para ti.",
+            "benefits": [                
+                    "Altamente efectiva",
+                    "Ampliamente disponible",
+                    "Fácil de usar"
+                ],
+            "use":
+                {
+                "imgs": [
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-08/pill-2.jpg",
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-08/pill-1.jpg"
+                ],
+                "description": "Tomar la píldora es igual que tomar otras tabletas, solo ponte una en la boca y trágala. Debes tomar la píldora todos los días a la misma hora, tanto si tienes sexo como si no. Si olvidas tomar la píldora, ésta no será tan efectiva como debería y podrías embarazarte. Si te olvidas de tomar 1 o más píldoras, o empiezas un paquete demasiado tarde, revisa el Folleto de Información para Pacientes que se incluye en el empaque de la píldora. En caso de duda, pregunta a tu profesional médico.\nDiferentes píldoras tienen diferentes ciclos, con algunos tipos de píldoras durante los descansos tienes que tomar píldoras sin hormonas para mantener la toma en forma continua. Baja nuestra aplicación de recordatorio de la píldora para que tengas tu rutina bajo control y estés protegida."
+                },
+            "pros": [
+                "Altamente efectiva cuando se usa como se indica",
+                "Permite la espontaneidad sexual y no interrumpe el sexo",
+                "Algunas píldoras pueden mejorar las menstruaciones abundantes y dolorosas",
+                "Algunas píldoras pueden tener efecto positivo sobre el acné",
+                "Se pueden tomar durante un largo período de tiempo",
+                "Es fácil de usar"
+            ],
+            "cons": [
+                "Puede hacer que algunas mujeres tengas dolores de cabeza y cambios del estado de ánimo",
+                "Se debe estar al pendiente del número de días que se ha tomado",
+                "Puede causar molestias mamarias, náusea, dolor de cabeza, aumento de peso",
+                "Puede provocar cambios en tu ciclo menstrual",
+                "No es frecuente, pero algunas mujeres que toman la píldora desarrollan presión alta",
+                "Es raro, pero algunas mujeres pueden tener coágulos sanguíneos, ataques cardiacos y apoplejía",
+                "No protege contra la infección por VIH (SIDA) ni contra otras enfermedades de transmisión sexual (ETS)"
+            ]
+        
+        },
+        {
+            "name": "SISTEMA IN­TRAUTERINO - SIU / T DE COBRE",
+            "efficiency": "99",
+            "regimen": "1-5 años",
+            "metodo": "Intrauterino",
+            "image": "https://hablemosdesexo.com/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/2020-11/siu.png?itok=nciaWIXe",
+            "description": "Un SIU es un pequeño sistema que libera pequeñas cantidades de hormonas y que se coloca dentro de la matriz.",
+            "details": "El SIU es un dispositivo pequeño, suave, en forma de T, con un reservorio que contiene la hormona progestina que un profesional médico coloca en la matriz. El SIU actúa liberando continuamente una dosis baja de la progestina dentro de la matriz. Ésta hace que el moco del cérvix sea más espeso, lo que dificulta el movimiento de los espermatozoides para llegar al óvulo y también adelgaza el recubrimiento del útero. Con 99.8% de efectividad, estás tan protegida como podrías estarlo por un método anticonceptivo. Es un gran método para la super organizada, la olvidadiza, la viajera frecuente y prácticamente para cualquiera que se ha propuesto no embarazarse. Sin embargo, hay algunos factores de riesgo individuales que hacen que el SIU no sea recomendable para algunas mujeres. Por lo tanto, consulta a tu profesional médico con el fin de determinar tu situación individual.",
+            "benefits": [                
+                    "Altamente efectivo",
+                    "Reversible de larga duración",
+                    "Fácil de usar"
+                ],
+            "use": {
+                "imgs": [
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-02/ius3.png",
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-02/ius2.png",
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-02/ius1.png"
+                ],
+                "description": "Para usar el SIU, en realidad no hay nada más que hacer que consultar a tu profesional médico para asegurarte de si es el método adecuado para ti. Una vez que el SIU ha sido colocado por un profesional médico capacitado, te encontrarás altamente protegida de un embarazo hasta por 3 ó 5 años, dependiendo del tipo. Después de que se extrae el SIU, el efecto anticonceptivo desaparece rápidamente y te puedes embarazar tan rápido como las mujeres que no han usado anticonceptivos."},
+            "pros": [
+                "Puede permanecer en su sitio durante 3 ó 5 años (dependiendo del tipo), pero se puede extraer en cualquier momento.",
+                "Con 99.8%, es uno de los métodos anticonceptivos más efectivos",
+                "No interrumpe el sexo",
+                "Las menstruaciones abundantes se pueden hacer más escasas y menos dolorosas",
+                "Algunas mujeres pueden tener menstruaciones más escasas o menos frecuentes, lo que disminuye el riesgo de adquirir anemia",
+                "Adecuado para mujeres que desean anticoncepción reversible de larga duración hasta por 3 o 5 años y quieren evitar un régimen de aplicación diaria, semanal o mensual",
+                "Se puede usar cuando se está amamantando",
+                "La fertilidad regresa a los niveles previos cuando se extrae el SIU"
+            ],
+            "cons": [
+                "Se necesita un profesional médico capacitado para colocarlo y extraerlo",
+                "En los primeros 6 meses de uso puede ser frecuente el sangrado y manchado irregular",
+                "Algunas mujeres presentan dolores de cabeza, sensibilidad mamaria y acné después de que se les coloca un SIU",
+                "Puede producir cólicos y/o sangrado irregular",
+                "Pequeño riesgo de infección durante la colocación y de expulsión",               
+                "No protege contra la infección por VIH (SIDA) ni contra otras enfermedades de transmisión sexual (ETS)"
+            ]
+        
+        },
+        {
+            "name": "PARCHE ANTICONCEPTIVO",
+            "efficiency": "91",
+            "regimen": "Cada Semana",
+            "metodo": "Intrauterino",
+            "image": "https://www.huesped.org.ar/wp-content/uploads/2017/04/parche-anticonceptivo.png",
+            "description": "Parche que se adhiere a la piel y libera hormonas que son altamente efectivas para prevenir el embarazo.",
+            "details": "El parche anticonceptivo es justamente eso, un parche que parece una curita brillante que se pega a la piel, al liberar hormonas resulta altamente efectivo para impedir que te embaraces. El parche libera constantemente las hormonas estrógeno y progestina que entran a la circulación a través de la piel e impiden que los ovarios liberen óvulos y también hacen que el moco cervical sea más espeso, lo que no permite que los espermatozoides lleguen el óvulo. El parche no es transparente, por lo que este método anticonceptivo es visible.",
+            "benefits": [                
+                    "Altamente efectiva",
+                    "Ampliamente disponible",
+                    "Fácil de usar"
+                ],
+            "use": {
+                "imgs": [
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-02/patch4.png",
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-02/patch3.png",
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-02/patch2.png"
+                ],
+                "description": "Desprende la parte posterior y aplica el parche directamente sobre tu piel en la parte baja del abdomen, las nalgas, la parte superior del brazo o la espalda. Deja el parche en su sitio durante una semana y luego reemplázalo con uno nuevo. Ponte un nuevo parche y quita el anterior una vez por semana durante 3 semanas, 21 días en total. Cada 4ª semana te quedas sin parche. Tu período menstrual empezará durante esta semana sin parche. Después repite nuevamente el mismo proceso. Si el parche se afloja o se desprende, revisa el Folleto de Información para el Paciente que se incluye en el empaque del parche. En caso de duda pregunta a tu médico."},
+            "pros": [
+                "Altamente efectivo",
+                "Es fácil de poner y de quitar",
+                "Permite la espontaneidad sexual y no interrumpe el sexo",
+                "No requiere atención diaria",
+                "No tienes que recordar tomarlo cada día"
+            ],
+            "cons": [
+                "Es visible y puede aflojarse o caerse",
+                "Se debe estar al pendiente del número de semanas que se ha usado",
+                "Puede causar algo de comezón y enrojecimiento en el sitio de aplicación",
+                "Puede hacer que algunas personas sufran dolores de cabeza y cambios del estado de ánimo",
+                "Puede causar dolores de cabeza, aumento de peso",
+                "Puede causar alteraciones menstruales",
+                "Es raro, pero algunas mujeres pueden tener coágulos sanguíneos, ataques cardiacos y apoplejía",
+                "No protege contra la infección por VIH (SIDA) ni contra otras enfermedades de transmisión sexual (ETS)"
+            ]
+        
+        },
+        {
+            "name": "IMPLANTE ANTICONCEPTIVO",
+            "efficiency": "99",
+            "regimen": "1-5 años",
+            "metodo": "Hormonal",
+            "image": "https://www.prudence.com.mx/wp-content/uploads/2019/04/IMPLANTE.png",
+            "description": "1 o 2 pequeños bastones de silicona liberadores de hormona que un profesional médico coloca bajo la piel.",
+            "details": "El implante anticonceptivo puede sonar un poco como algo de la era espacial, pero es en realidad un anticonceptivo altamente efectivo y muy discreto pues difícilmente es visible. Es un dispositivo más o menos del mismo tamaño de un fósforo que es colocado inmediatamente debajo de la piel de tu brazo, donde libera constantemente pequeñas dosis de una hormona (progestina) desde un depósito hacia tu circulación. La hormona evita que tus ovarios liberen óvulos, y también vuelve más espeso el moco cervical, dificultando el movimiento de los espermatozoides dentro de útero para fertilizar un óvulo.",
+            "benefits": [
+                    "Altamente efectiva",
+                    "Reversible de larga duración",
+                    "Fácil de ocultar"
+                ],
+            "use": {
+                "imgs": [
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-08/implant2.png",
+                    "https://www.your-life.com/sites/g/files/vrxlpx28791/files/2020-08/implant1.png"
+                ],
+                "description": "Una vez que has decidido, después de haber recibido asesoría de tu profesional médico, que el implante anticonceptivo es el método para ti, tu profesional médico se asegurará de que no estás embarazada y de que se te puede colocar el implante. Después de poner anestesia local, un profesional médico capacitado adormecerá una pequeña área de la parte superior interna de tu brazo y colocará el implante inmediatamente por debajo de la superficie con una aguja especial. Una vez que la colocación ha finalizado queda poco o nada por hacer o recordar. El implante libera pequeñas cantidades de hormonas en tu sangre durante el curso de 3 ó 5 años, dependiendo del tipo. Es adecuado para mujeres que desean anticoncepción reversible de larga duración altamente efectiva y quieren evitar un régimen de aplicación diaria, semanal o mensual. Un profesional médico capacitado lo puede extraer en cualquier momento mediante cirugía menor. Una vez que el implante ha sido extraído, el efecto anticonceptivo desaparece rápidamente y te puedes embarazar tan rápido como las mujeres que no han usado anticonceptivos."},
+            "pros": [
+                "Con 99.5%, es el método anticonceptivo más efectivo disponible",
+                "Adecuado para mujeres que desean anticoncepción reversible de larga duración hasta por 3 ó 5 años y quieren evitar un régimen de aplicación diaria, semanal o mensual.",
+                "Permite la espontaneidad sexual y no interrumpe el sexo",
+                "Puede ofrecer una alternativa a aquellas a las que los estrógenos les afectan",
+                "Lo pueden usar mujeres que amamantan seis semanas después del parto",
+                "Puede disminuir las menstruaciones abundantes y dolorosas en algunas mujeres"
+            ],
+            "cons": [
+                "Se necesita que un profesional médico capacitado lo coloque y lo extraiga",
+                "Al inicio puede producir cambios en el patrón de sangrado",
+                "Puede causar aumento de peso y dolor mamario y abdominal",
+                "No protege contra la infección por VIH (SIDA) ni contra otras enfermedades de transmisión sexual (ETS)"
+            ]
+        }
+    ]
+}
