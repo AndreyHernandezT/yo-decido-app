@@ -6,6 +6,7 @@ const colorAzulOscuro = Color(0XFF022E57);
 const colorAzulOscuro2 = Color(0XFF210662); //0XFF0E2B67
 const colorBlanco = Colors.white;
 const colorTitulo = Color(0XFF840529);
+const colorFondo = Color(0XFFFFF8FD); //Color(0XFFFF96AD)
 const estiloTitulo1 =
     TextStyle(color: colorTitulo, fontSize: 25, fontWeight: FontWeight.bold);
 const estiloTitulo2 = TextStyle(

@@ -385,53 +385,57 @@ class SelectedMethod extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: colorFondo,
         body: DefaultTabController(
-      length: 4,
-      child: NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return <Widget>[
-              SliverAppBar(
-                title: Text(
-                  method.name,
-                  style: Theme.of(context).textTheme.headline2,
-                ),
-                expandedHeight: MediaQuery.of(context).size.height * 0.35,
-                floating: false,
-                pinned: true,
-                backgroundColor: colorPrimario,
-                flexibleSpace: FlexibleSpaceBar(
-                    background: Image.network(method.image, fit: BoxFit.cover)),
-                bottom: TabBar(
-                  indicatorColor: colorAzulOscuro,
-                  labelColor: colorAzulOscuro,
-                  unselectedLabelColor: colorAzulOscuro2,
-                  tabs: [
-                    new Tab(icon: new Icon(Icons.info), text: "Detalles"),
-                    new Tab(
-                        icon: new Icon(Icons.lightbulb), text: "Descripción"),
-                    new Tab(icon: Icon(Icons.help), text: "Uso"),
-                    new Tab(
-                      icon: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.add_circle),
-                            Icon(Icons.remove_circle)
-                          ]),
-                      text: "Pros & Contras",
-                    )
-                  ],
-                ),
-              ),
-            ];
-          },
-          body: TabBarView(
-            children: [
-              pageDetails(method),
-              pageDescription(method),
-              pageComo(method),
-              pageProsCons(method),
-            ],
-          )),
-    ));
+          length: 4,
+          child: NestedScrollView(
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) {
+                return <Widget>[
+                  SliverAppBar(
+                    title: Text(
+                      method.name,
+                      style: Theme.of(context).textTheme.headline2,
+                    ),
+                    expandedHeight: MediaQuery.of(context).size.height * 0.35,
+                    floating: false,
+                    pinned: true,
+                    backgroundColor: colorPrimario,
+                    flexibleSpace: FlexibleSpaceBar(
+                        background:
+                            Image.network(method.image, fit: BoxFit.cover)),
+                    bottom: TabBar(
+                      indicatorColor: colorAzulOscuro,
+                      labelColor: colorAzulOscuro,
+                      unselectedLabelColor: colorAzulOscuro2,
+                      tabs: [
+                        new Tab(icon: new Icon(Icons.info), text: "Detalles"),
+                        new Tab(
+                            icon: new Icon(Icons.lightbulb),
+                            text: "Descripción"),
+                        new Tab(icon: Icon(Icons.help), text: "Uso"),
+                        new Tab(
+                          icon: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.add_circle),
+                                Icon(Icons.remove_circle)
+                              ]),
+                          text: "Pros & Contras",
+                        )
+                      ],
+                    ),
+                  ),
+                ];
+              },
+              body: TabBarView(
+                children: [
+                  pageDetails(method),
+                  pageDescription(method),
+                  pageComo(method),
+                  pageProsCons(method),
+                ],
+              )),
+        ));
   }
 }
