@@ -3,9 +3,10 @@ import 'dart:ui';
 import 'package:ff_navigation_bar/ff_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:primer_avance/screens/home.dart';
-import 'package:primer_avance/screens/methods.dart';
+import 'package:primer_avance/screens/list_methods.dart';
 import 'package:primer_avance/screens/profile.dart';
 import 'package:primer_avance/screens/statistics.dart';
+import 'package:primer_avance/src/constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: NestedScrollView(
+          floatHeaderSlivers: true,
           headerSliverBuilder: (context, innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
@@ -35,7 +37,8 @@ class _MyAppState extends State<MyApp> {
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 floating: true,
-                forceElevated: innerBoxIsScrolled,
+                snap: true,
+                //forceElevated: innerBoxIsScrolled,
                 actions: [
                   Container(
                     child: IconButton(
@@ -56,11 +59,11 @@ class _MyAppState extends State<MyApp> {
         ),
         bottomNavigationBar: FFNavigationBar(
           theme: FFNavigationBarTheme(
-            barBackgroundColor: Colors.white,
-            selectedItemBorderColor: Color(0XFFFF96AD),
-            selectedItemBackgroundColor: Color(0xFFFFDEE5),
-            selectedItemIconColor: Color(0XFF022E57),
-            selectedItemLabelColor: Color(0XFF022E57),
+            barBackgroundColor: colorBlanco,
+            selectedItemBorderColor: colorPrimario,
+            selectedItemBackgroundColor: colorSecundario,
+            selectedItemIconColor: colorAzulOscuro,
+            selectedItemLabelColor: colorAzulOscuro2,
           ),
           selectedIndex: paginaActual,
           onSelectTab: (index) {
@@ -80,15 +83,15 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       theme: ThemeData(
-        primaryColor: Color(0XFFFF96AD),
-        highlightColor: Color(0XFF022E57),
+        primaryColor: colorPrimario,
+        highlightColor: colorSecundario,
         textTheme: TextTheme(
           bodyText1: TextStyle(
             color: Colors.white,
             fontSize: 15,
           ),
           bodyText2: TextStyle(
-            color: Colors.lightGreen,
+            color: Colors.green,
             fontSize: 15,
             fontWeight: FontWeight.bold,
           ),
@@ -98,14 +101,9 @@ class _MyAppState extends State<MyApp> {
             color: Colors.white,
           ),
           headline2: TextStyle(
-            fontSize: 23.0,
-            fontWeight: FontWeight.normal,
-            color: Colors.blueGrey[200],
-          ),
-          headline3: TextStyle(
             fontSize: 20.0,
-            fontWeight: FontWeight.normal,
-            color: Colors.blueGrey[200],
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
       ),

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:primer_avance/models/Method.dart';
+import 'package:primer_avance/screens/pages/template.dart';
 
 class CreateCards extends StatelessWidget {
-  //const CreateCards({ Key? key }) : super(key: key);
   final List<Method> methods;
 
-  CreateCards({required this.methods});
+  CreateCards({
+    required this.methods,
+  });
 
-  @override
   Widget levelEfficiency(method, efficien, context) {
     final Color level;
     TextStyle? body;
     if (int.parse(efficien) > 85) {
-      level = Colors.lightGreen;
+      level = Colors.green;
       body = Theme.of(context).textTheme.bodyText2;
     } else {
       level = Colors.yellow;
@@ -39,56 +40,58 @@ class CreateCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+        padding: EdgeInsets.zero,
         itemCount: methods.length,
         itemBuilder: (context, index) {
-          final method = methods[index];
-          return Container(
-            margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
-            width: MediaQuery.of(context).size.width,
-            height: 180,
-            decoration: BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(15),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.6),
-                  offset: Offset(
-                    0.0,
-                    10.0,
-                  ),
-                  blurRadius: 10.0,
-                  spreadRadius: -6.0,
-                ),
-              ],
-              image: DecorationImage(
-                colorFilter: ColorFilter.mode(
-                  Colors.black.withOpacity(0.35),
-                  BlendMode.multiply,
-                ),
-                image: NetworkImage(method.image),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Stack(
-              children: [
-                Align(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 5.0),
-                    child: Text(
-                      method.name,
-                      style: Theme.of(context).textTheme.headline1,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      textAlign: TextAlign.center,
+          final _method = methods[index];
+          return InkWell(
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+              width: MediaQuery.of(context).size.width,
+              height: 180,
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.6),
+                    offset: Offset(
+                      0.0,
+                      10.0,
                     ),
+                    blurRadius: 10.0,
+                    spreadRadius: -6.0,
                   ),
-                  alignment: Alignment.center,
+                ],
+                image: DecorationImage(
+                  colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(0.35),
+                    BlendMode.multiply,
+                  ),
+                  image: NetworkImage(_method.image),
+                  fit: BoxFit.cover,
                 ),
-                Align(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
+              ),
+              child: Stack(
+                children: [
+                  Align(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5.0),
+                      child: Text(
+                        _method.name,
+                        style: Theme.of(context).textTheme.headline1,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    alignment: Alignment.center,
+                  ),
+                  Align(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
                           padding: EdgeInsets.all(5),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
@@ -96,57 +99,64 @@ class CreateCards extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: levelEfficiency(
-                              method, method.efficiency, context)),
-                      Container(
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.4),
-                          borderRadius: BorderRadius.circular(15),
+                              _method, _method.efficiency, context),
                         ),
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.offline_bolt_rounded,
-                              color: Color(0xFFFFDEE5),
-                              size: 18,
-                            ),
-                            SizedBox(width: 7),
-                            Text(
-                              method.metodo,
-                              style: Theme.of(context).textTheme.bodyText1,
-                            ),
-                          ],
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          margin: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.4),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.offline_bolt_rounded,
+                                color: Color(0xFFFFDEE5),
+                                size: 18,
+                              ),
+                              SizedBox(width: 7),
+                              Text(
+                                _method.metodo,
+                                style: Theme.of(context).textTheme.bodyText1,
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.4),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.calendar_today_rounded,
-                              color: Color(0xFFFFDEE5),
-                              size: 18,
-                            ),
-                            SizedBox(width: 7),
-                            Text(
-                              method.regimen,
-                              style: Theme.of(context).textTheme.bodyText1,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          margin: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.4),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.calendar_today_rounded,
+                                color: Color(0xFFFFDEE5),
+                                size: 18,
+                              ),
+                              SizedBox(width: 7),
+                              Text(
+                                _method.regimen,
+                                style: Theme.of(context).textTheme.bodyText1,
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    alignment: Alignment.bottomLeft,
                   ),
-                  alignment: Alignment.bottomLeft,
-                ),
-              ],
+                ],
+              ),
             ),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return SelectedMethod(method: _method);
+              }));
+            },
           );
         });
   }
